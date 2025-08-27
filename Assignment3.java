@@ -1,4 +1,6 @@
 
+
+
 class Book{
     String title;
      String author; 
@@ -38,6 +40,44 @@ class Car{
     
 
 }
+
+class MathOperation{
+    
+    public int add(int a, int b){
+        // System.out.println(a+b);
+        return  a+b;
+    }
+    public int add(int a, int b, int c){
+        return a+b+c;
+    }
+    public double add(double a, double b){
+        return a+b;
+    }
+
+}
+
+class Student{
+  private String name ;
+  private int marks ;
+
+    public int getMarks() {
+        return marks;
+    }
+
+    // public String getName() {
+    //     return name;
+    // }
+    public String getName() {
+        return name;
+    }
+    
+    
+     public void setName(String name){
+        this.name = name;
+     }
+    
+}
+
 public class Assignment3 {
     public static void main(String[] args) {
         Book b1 = new Book("Java Basics" , "John Doe",450.50);
@@ -45,5 +85,18 @@ public class Assignment3 {
 
         Car c1 = new Car("Toyota","Fortuner");
         c1.display();
+
+       MathOperation m1 = new MathOperation();
+       System.out.println( m1.add(2, 4));
+       System.out.println(m1.add(2, 4,6));
+       System.out.println(m1.add(23.00, 34.91));
+
+       Student e1 = new Student();
+       e1.setName("yash verma");
+
+       System.out.println(e1.getName());
+
+
+
     }
 }
