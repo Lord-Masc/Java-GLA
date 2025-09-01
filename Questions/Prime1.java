@@ -21,22 +21,18 @@ public class Prime1 {
 
 
         int num = 13;
-        int flag = 0;
-        for(int  i = 2 ;i<num;i++){
+        boolean isPrime = true; // Assume the number is prime until proven otherwise
+
+        for (int i = 2; i < num; i++) {
             if (num%i == 0) {
-                flag = 1;
-                break;
-            }
-            else{
-                flag = 0;
-                System.out.println(i);
+                isPrime = false; // Found a factor, so it's not prime
+                break; // No need to check further, exit the loop
             }
         }
-        // isPrime(40);
-        if (flag == 0) {
-            System.out.println("Prime");
+        if (isPrime && num > 1) { // 0 and 1 are not prime numbers
+            System.out.println(num + " is a Prime number");
         } else {
-            System.out.println("Not Prime");
+            System.out.println(num + " is not a Prime number");
         }
     }
 }
