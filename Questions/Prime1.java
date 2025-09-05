@@ -17,6 +17,22 @@ public class Prime1 {
     //         }
     //     }  
     // }
+
+    static void printPrime(int n){
+        boolean flag = false;
+        for(int i = 2;i<=n;i++){
+             if (n%i==0) {
+                flag = true;
+                 break;
+             }
+             if(!flag){
+                System.out.println(i);
+             }else{
+                flag = false;
+             }
+             
+        }
+    }
     public static void main(String[] args) {
 
 
@@ -34,5 +50,6 @@ public class Prime1 {
         } else {
             System.out.println(num + " is not a Prime number");
         }
+        printPrime(100);
     }
 }
